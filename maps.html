@@ -1,0 +1,728 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    body{
+        background-color:#121212;
+    }
+header{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-around;
+
+    }
+.logo{
+   
+    top:0px;
+    left:0px;
+    justify-self: space-between;
+}
+.tooltip {
+  position: relative;
+  display: inline;
+  justify-self: space-evenly;
+  color:white;
+  font-size: large;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width:800px;
+  height: 500px;
+  background-color: White;
+  color: #7dc3f0;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 10%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.doc {
+  position: relative;
+  display: inline;
+  justify-self: space-evenly;
+  color:white;
+  font-size: large;
+}
+
+.doc .doctext {
+  visibility: hidden;
+  width:500px;
+  height: 500px;
+  background-color: White;
+  color: grey;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+.doc .doctext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.doc:hover .doctext {
+  visibility: visible;
+}
+.company {
+  position: relative;
+  display: inline;
+  justify-self: space-evenly;
+  color:white;
+  font-size: large;
+}
+
+.company .companymenu {
+  visibility: hidden;
+  width:300px;
+  height: 300px;
+  background-color: White;
+  color: grey;
+  text-align: center;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 90%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+.company .companymenu::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent
+}
+
+.company:hover .companymenu{
+  visibility: visible;
+ 
+}
+
+*>div{
+    color: white;
+    font-size: large;
+}
+button{
+    color: white;
+    background-color: #4d4d4d;
+    width:80px;
+    height:30px;
+    border-radius:30px;
+   
+}
+button:hover{
+    background-color: hsl(0  0% 80%); 
+}
+.fa
+{
+  text-align: center;
+  font-style:bold;
+  color:#4d4d4d
+}
+
+ .fa:hover{
+     color:#007afc;
+ }
+
+ *>th{
+     color:#93949b;
+     font-style: bold;
+ }
+
+ *>td{
+     color: #4d4d4d;
+ }
+
+ *>td:hover{
+    color:#007afc;
+ }
+
+.uno{
+ position: relative;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+td>img{
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+@keyframes example {
+  0%   {background-img:url(photoz/one.png); left:0px; top:0px;}
+  25%  {background-img:url(photoz/two.png); right:800px; top:0px;}
+ 50%  {background-img:url(photoz/three.png); right:900px; top:0px;}
+  75%  {background-img:url(photoz/four.png); right:1000px; top:0px;}
+  100% {background-img:url(photoz/five.png); right:1200px; top:0px;} 
+}
+ body>h1{
+   text-align: center;
+   color:white;
+ }
+
+ body>p{
+   color:#9ba2b2;
+   text-align: center;
+   font-size: 25px;
+ }
+body>button{
+  background-color: #007afc;
+  margin-left: 500px;
+  color: white;
+  width: 300px;
+  height: 50px;
+}
+body>button:hover{
+  background-color:#0d4077;
+}
+
+marquee>span{
+  color:#444b5e;
+  font-size: 50px;
+  padding-inline-start: 20px;
+}
+.snap{
+ font-family:  Cerapro,sans-serif;
+ font-size: 50px;
+}
+ /* .geo{
+
+
+  display: inline-flex;
+} */
+.nyc{
+  font-family: Fruktur;
+
+} 
+
+.skewup{
+  position: absolute;
+  top:750px;
+  left:100px;
+  transform:skew(190deg);
+}
+
+main{
+  background-color: #15181b;
+  width:100%;
+  height: 150vh;
+  flex-direction: row;
+  align-content: center;
+}
+main>h1{
+  color:white;
+  text-align: center;
+}
+main>button{
+  width: 400px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border:2px solid white;
+  margin-left: 450px;
+  font-size: 20px;
+}
+main>button:hover{
+  background-color: #15181b;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto ;
+ grid-auto-flow: row;
+ justify-content: space-around;
+ grid-gap:30px ;
+}
+.grida:hover{
+transform: scale(1.1,1.1);
+}
+.gridb:hover{
+  transform: scale(1.1,1.1);
+}
+.gridc:hover{
+  transform: scale(1.1,1.1);
+}
+.gridd:hover{
+  transform: scale(1.1,1.1);
+}
+
+
+ footer{
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+ .end{
+  display: flex;
+   flex-wrap: wrap;
+   flex-direction: row; 
+   justify-content: space-between; 
+ }
+.conclusion{
+  display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content:flex-start; 
+}
+.conclusion>p{
+  padding-inline-start: 20px;
+}
+
+.icons{
+  justify-content: flex-end;
+}
+.icons>*{
+  padding-inline-start: 50px;
+}
+ 
+</style>
+<body>
+    <header>
+        <div class="logo" >
+      <img src="photoz/mapslogo.png" width="150px" >
+    </div>
+
+    <div class="tooltip">Products
+      <table class="tooltiptext">
+        <th>PRODUCTS</th>
+        <th>PLATFORMS</th>
+
+        <tr>
+        <td><i class="fa fa-map">Maps</i></td>
+        <td><i class="fa fa-desktop">Web</i></td>
+        </tr>
+
+        <tr>
+        <td><i class="fa fa-navigator">Navigation</i></td>
+        <td><i class="fa fa-mobile">Mobile</i></td>
+        </tr>
+
+        <tr>
+        <td><i class="fa fa-compass">Search</i></td>
+        <td><i class="fa fa-cube">AR</i></td>
+        </tr>
+
+        <tr>
+        <td><i class="fa fa-paint">Studio</i></td>
+        <td><i class="fa fa-book">Atlas</i></td>
+        </tr>
+
+        <tr>
+        <td><i class="fa fa-eye">Vision</i></td>
+        </tr>
+       
+        <tr>
+        <td><i class="fa fa-pie-chart">Data</i></td>
+        </tr>
+</table>
+
+      </div>
+
+    
+      <div class="tooltip">Solutions
+        <table class="tooltiptext">
+          <th>INDUSTRIES</th>
+          <th>USECASES</th>
+  
+          <tr>
+          <td><i class="fa fa-truck">Logistics</i></td>
+          <td><i class="fa fa-data">Data Visualisation</i></td>
+          </tr>
+  
+          <tr>
+          <td><i class="fa fa-mobile">Consumer App</i></td>
+          <td><i class="fa fa-home">Store Location</i></td>
+          </tr>
+  
+          <tr>
+          <td><i class="fa fa-bar-chart">Bus Intelligence</i></td>
+          <td><i class="fa fa-tracking">Turn-by-turn navigation</i></td>
+          </tr>
+        
+          <tr>
+         <td>All Industries &#8594;</i></td>
+         <td>All Use Cases &#8594;</i></td>
+         </tr>
+
+  <th>SOLNS</th>
+  <th>WEBNARS &#8594;</i></th>
+
+          <tr>
+          <td><i class="fa fa-map-tracking">Asset tracking</i></td>
+          <td>HOW-TO-VIDEOS &#8594;</td>
+          </tr>
+  
+          <tr>
+          <td><i class="fa fa-gps">Real time App</i></td>
+          </tr>
+         
+          <tr>
+          <td><i class="fa fa-story-board">Interactive Storytelling</i></td>
+          </tr>
+
+          <tr>
+            <td> All Solutions<i class="fa fa-arrow"></i></td> 
+          </tr>
+  </table>
+ 
+</div>    
+<div class="doc">Documentation
+    <table class="doctext">
+      <th>MAPS</th>
+      <th>NAVIGATION SKILLS</th>
+
+      <tr>
+      <td>Map GLJS</td>
+      <td>for iOS</td>
+      </tr>
+
+      <tr>
+        <td>MapBox Tiling Service</td>
+        <td>for Android</td>
+        </tr>
+
+        <th>MAPS SDKS</th>
+        <th>VISION SDKS</th>
+
+        <tr>
+            <td>for iOS</td>
+            <td>for iOS</td>
+            </tr>
+
+            <tr>
+        <td>for Android</td>
+          <td>for Android</td>
+            </tr>
+
+            <tr>
+                <td>for Unity</td>   
+            </tr>
+            <tr>
+                <td>for QT</td> 
+
+                <th>STUDIO</th>
+                <tr>
+                <td></td> 
+                <td>Mapbox Studio Manual</td>
+            </tr>
+            </tr>
+  
+
+<th>HELP</th>
+
+
+<tr>
+    <td>How MapBox works</td>
+    
+    </tr>
+
+    <tr>
+      <td>Tutorials</td>
+       
+      
+      <th>MAPBOX SERVICE</th>
+
+      <tr>
+          <td></td>
+        <td> MAPS APIs</td> 
+      </tr>
+     
+     <tr>
+         <td></td>
+        <td>Navigation APIs</td> 
+      </tr>
+
+      <tr>
+          <td></td>
+        <td>Geocoding APIs</td> 
+      </tr>
+      </tr>
+      
+</table>
+
+            </div>
+            <div class="company">Company
+                <table class="companymenu">
+            <tr>
+                <td>About</td>
+             </tr>
+             <tr>
+               <td> Customers</td>
+            </tr>
+            <tr>
+                <td>Careers</td>
+             </tr> 
+             <tr>
+              <td> Diversity&Inclusion</td> 
+             </tr> 
+             <tr>
+             <td>Community</td>
+             </tr>
+            </table>
+            </div>
+            <div>Pricing</div>
+            <div>Tag</div>
+            <div>
+                <button>Sign In</button>
+            </div>
+    </header>
+
+<div class="uno">
+  <table>
+    <tr>
+ <td> <img src="photoz/one.png"></td>
+ <td> <img src="photoz/two.png"> </td>
+ <td> <img src="photoz/three.png"></td>
+ <td> <img src="photoz/four.png"></td>
+  <td><img src="photoz/five.png"></td> 
+</tr>
+</table>
+</div>
+
+    <h1>Maps and location for<br/> developers </h1>
+    <p>Precise location data and powerful developer tools to
+      <br/> change the way we navigate the world</p>
+       <button>Start mapping for free</button>
+
+
+<marquee>
+  <span class="facebook">
+    FACEBOOK
+  </span>
+
+  <span class="geo">
+    National Geographic
+  </span>
+
+  <span class="adobe">
+    Adobe
+  </span>
+
+  <span class="snap">
+    Snap Inc.
+  </span>
+
+ 
+
+  <span  class="por">
+    PORSCHE
+  </span>
+
+  <span class="shop">
+    Shopify
+  </span>
+
+  <span class="cnn">
+  <i class="fa fa-cnn"></i>
+  </span>
+
+
+  <span class="work">
+    We Work
+  </span>
+
+  <span class="press">
+    WORD PRESS
+  </span>
+
+  <span class="accu">
+    AccuWeather
+  </span>
+
+  <span class="landrover">
+    LANDROVER
+  </span>
+
+  <span class="strave">
+    STRAVE
+  </span>
+
+  <span class="tab">
+    Tableae
+  </span>
+
+  <span class="nyc">
+    The New York Times
+  </span>
+  
+</marquee>
+<br/>
+<br/>
+<br/>
+
+
+<div class ="skewdown">
+  <div><img src="photoz/skewdown.png" style="width:1500px; height: 1000px;"></div>
+</div>
+
+
+<div class="skewup">
+  <div><img src="photoz/skewup.png" style="width:300px;"></div>
+</div>
+
+
+
+<main>
+  <h1>Showcase</h1>
+
+ <div class="grid">
+  <div class="grida"><img src="photoz/down1.png" style=" width: 500px;height: 300px;border-radius: 10px;"></div>
+  <div class="gridb"><img src="photoz/down2.png" style=" width:500px;height: 300px;border-radius: 10px;"></div>
+  <div class="gridc"><img src="photoz/down3.png" style=" width:500px;height: 300px;border-radius: 10px;"></div>
+  <div class="gridb"><img src="photoz/down4.png" style=" width:500px;height: 300px;border-radius: 10px;"></div>
+
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+ <button>Discover more from our customers &#8594;</span> </button>
+</main>
+<br/>
+<br/>
+<br/>
+
+
+    <footer>
+      <div class="logo" >
+        <img src="photoz/mapslogo.png" width="150px" >
+      </div>
+      
+    <div>
+      <table>
+        <th style="color:white;padding-inline-start: 50px;">PRODUCTS</th>
+        <th style="color:white;padding-inline-start: 50px;">PLATFORMS</th>
+        <th style="color:white;padding-inline-start: 50px;">COMPANY</th>
+        <th style="color:white;padding-inline-start: 50px;">SOLUTIONS</th>
+
+        <tr>
+        <td style="padding-inline-start:60px;">Maps</td>
+        <td style="padding-inline-start:60px;">Web</td>
+        <td style="padding-inline-start:60px;">About</td>
+        <td style="padding-inline-start:60px;">Industries</td>
+        </tr>
+        
+        <tr>
+          <td style="padding-inline-start:60px;">Navigation</td>
+          <td style="padding-inline-start:60px;">Mobile</td>
+          <td style="padding-inline-start:60px;">Customers</td>
+          <td  style="padding-inline-start:60px;">Automative</td>
+          </tr>
+
+          <tr>
+            <td style="padding-inline-start:60px;">Search</td>
+            <td style="padding-inline-start:60px;">AR</td>
+            <td style="padding-inline-start:60px;">Careers</td>
+            <td style="padding-inline-start:60px;">Logistics</td>
+            </tr>
+            
+            <tr>
+              <td style="padding-inline-start:60px;">Studio</td>
+              <td style="padding-inline-start:60px;">Atlass</td>
+              <td style="padding-inline-start:60px;">Press</td>
+              <td style="padding-inline-start:60px;">Data Visualisation</td>
+              </tr>
+
+              <tr>
+                <td style="padding-inline-start:60px;">Version SDK</td>
+                <th style="color: white;padding-inline-start: 50px;">SUPPORT</th>
+                <td style="padding-inline-start:60px;">Community</td>
+                <td style="padding-inline-start:60px;">Asset Tracking</td>
+                </tr>
+
+                <tr>
+                  <td style="padding-inline-start:60px;">Data</td>
+                  <td style="padding-inline-start:60px;">Documentation</td>
+                  <td style="padding-inline-start:60px;">Continent</td>
+                  <td style="padding-inline-start:60px;">Webnars</td>
+                  </tr>
+
+                  <tr>
+                    <td style="padding-inline-start:60px;">Pricing</td>
+                    <td style="padding-inline-start:60px;">Paid Support</td>
+                    <td style="padding-inline-start:60px;"></td>
+                    <td style="padding-inline-start:60px;">Blog</td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td style="padding-inline-start:60px;">Tutorials</td>
+                      <td></td>
+                      <td></td>
+                      </tr>
+
+
+                      <tr>
+                        <td></td>
+                        <td style="padding-inline-start:60px;">Help</td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                      </table>
+                      </div> 
+                      <br/>
+                      <br/>
+                      <br/>
+</footer>
+<div class="end">
+<div class="conclusion">
+      <p>&copy;Mapbox</p>
+      <p>Terms</p>
+      <p>Privacy</p>
+      <p>Search</p>
+</div>
+
+<div class="icons">
+  <i  class="fa fa-github"></i>
+  <i  class="fa fa-twitter"></i>
+  <i  class="fa fa-linkedin"></i>
+  <i  class="fa fa-facebook"></i>
+  <i  class="fa fa-instagram"></i>
+</div>
+
+</div>
+ 
+</body>
+</html>
