@@ -1,177 +1,189 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<link href="http://emoji-css.afeld.me/emoji.css" rel="stylesheet">
-<meta charset="UTF-8">
+  <link href="http://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+  <meta charset="UTF-8">
 </head>
 
 <style>
-.flex-container{
-display:flex;
-flex-direction:column;
-}
-#Navigation{
-justify-self:flex-start;
-margin:50px;
-text-align:center;
-}
-#Feedback{
-justify-self:center;
-text-align:center;
-margin:50px;
-}
-.emailphone{
-display:flex;
-flex-direction:row;
-}
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
 
-.dmn{
-display:flex;
-flex-direction:row;
-}
+  #Navigation {
+    justify-self: flex-start;
+    margin: 50px;
+    text-align: center;
+  }
 
-#Footer{
-justify-self:flex-end;
-text-align:center;
-margin:50px;
-}
-.tooltip {
-  position: relative;
-  display: inline;
-  justify-self: space-evenly;
-  color:white;
-  font-size: large;
-}
+  #Feedback {
+    justify-self: center;
+    text-align: center;
+    margin: 50px;
+  }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width:800px;
-  height: 500px;
-  background-color: White;
-  color: #7dc3f0;
-  text-align: center;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  top: 90%;
-  left: 50%;
-  margin-left: -60px;
-}
+  .emailphone {
+    display: flex;
+    flex-direction: row;
+  }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 10%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-}
+  .dmn {
+    display: flex;
+    flex-direction: row;
+  }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+  #Footer {
+    justify-self: flex-end;
+    text-align: center;
+    margin: 50px;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline;
+    justify-self: space-evenly;
+    color: white;
+    font-size: large;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 800px;
+    height: 500px;
+    background-color: White;
+    color: #7dc3f0;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 </style>
 
 <body>
-<div class="flex-container">
-<div id="Navigation">TOP</div>
-<div id="Feedback">
-<form> 
-<div class="emailphone">
-<label for="email">E-MAIL:</label>
-<input type="email"  id="email" name="email" size="50"  required autocomplete="on"  placeholder="Enter Your E-Mail" style="margin-bottom:150px;text-align:center;width:50%;">
+  <div class="flex-container">
+    <div id="Navigation">TOP</div>
+    <div id="Feedback">
+      <form>
+        <div class="emailphone">
+          <label for="email">E-MAIL:</label>
+          <input type="email" id="email" name="email" size="50" required autocomplete="on"
+            placeholder="Enter Your E-Mail" style="margin-bottom:150px;text-align:center;width:50%;">
 
 
-<label for="contancts">Mobile Contanct(s):</label>
-<input type="tel" id="contancts" name="contancts" required  pattern="[0-9]{4}-[0-9]{6}" placeholder="0***-******" style="margin-bottom:150px;text-align:center;width:30%;">
+          <label for="contancts">Mobile Contanct(s):</label>
+          <input type="tel" id="contancts" name="contancts" required pattern="[0-9]{4}-[0-9]{6}"
+            placeholder="0***-******" style="margin-bottom:150px;text-align:center;width:30%;">
 
-</div>
+        </div>
 
-<div class="dmn">
-<label for="username">DomainName:</label>
-<input type="text" id ="username" name="username" required autocomplete="on" placeholder="DomainName" style="margin-bottom:15px; text-align:center;width:50%;">
+        <div class="dmn">
+          <label for="username">DomainName:</label>
+          <input type="text" id="username" name="username" required autocomplete="on" placeholder="DomainName"
+            style="margin-bottom:15px; text-align:center;width:50%;">
 
-<label for="domain">DOMAIN:</label>
-<select  id="domain"  required  autocomplete="on" placeholder="Enter Your Domain Name"  onchange="myButton" style="margin-bottom:15px;text-align:center;width:30%;">
- <option value="None">--Please choose an option--</option>
- <option value="25000">co.tz</option>
- <option value="25000">or.tz</option>
- <option value="25000">ac.tz</option>
- <option value="35000">com/biz/info/net/org/us</option>
-</select>
+          <label for="domain">DOMAIN:</label>
+          <select id="domain" required placeholder="Enter Your Domain Name"
+            style="margin-bottom:15px;text-align:center;width:30%;">
+            <option value="None">--Please choose an option--</option>
+            <option value="25000">co.tz</option>
+            <option value="25000">or.tz</option>
+            <option value="25000">ac.tz</option>
+            <option value="35000">com/biz/info/net/org/us</option>
+          </select>
 
-<button type="button" onclick="myDomain()" id="dom">PRICE</button>
+          <button type="button" id='webHostingPriceBtn' onclick="myDomain()" id="dom">-</button>
 
-<script>
-  
-function myDomain() {
-  var x = document.getElementById("domain").value;
-   
-   alert(x);
-}
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
 
-function myButton(){
+        <label for="hosting">WEBSITE HOSTING:</label>
+        <select id="hosting" title="Website hosting options" required><br><br>
+          <option value="">--Please choose an option--</option>
+          <option value="50000">mini</option>
+          <option value="100000">budget</option>
+          <option value="150000">bronze</option>
+          <option value="250000">silver</option>
+          <option value="300000">gold</option>
+        </select>
 
-console.log("ASA");
+        <button id='webHostingPriceBtn' type="button" onclick="myWeb()">PRICE</button>
 
-}
+        <script>
+          function myWeb() {
+            var x = document.getElementById("hosting").value;
+            alert(x);
+          }
 
-</script>
- 
+        </script>
 
-</div>
-<br/><br/><br/><br/><br/><br/><br/><br/> 
-     
-<label for="hosting">WEBSITE HOSTING:</label>
-<select id="hosting" title="Website hosting options" required ><br><br>
- <option value="">--Please choose an option--</option>
- <option value="50000">mini</option>
- <option value="100000">budget</option>
- <option value="150000">bronze</option>
- <option value="250000">silver</option>
- <option value="300000">gold</option>
- </select>
- 
- <button type="button" onclick="myWeb()">PRICE</button>
+        <br /><br /><br /><br /><br /><br /><br /><br />
 
-<script>
-function myWeb() {
-  var x = document.getElementById("hosting").value;
-   alert(x);
-}
+        <label for="design">WEBSITE DESIGNING:</label>
+        <select id="design" title="Website design options" required><br><br>
+          <label for="design">WEBSITE DESIGN:</label>
+          <option value="">--Please choose an option--</option>
+          <option value="500000">mini</option>
+          <option value="850000">standard</option>
+          <option value="1500000">prestige</option>
+        </select>
 
-</script>
- 
- <br/><br/><br/><br/><br/><br/><br/><br/>
+        <button type="button" onclick="myDesign()">PRICE</button>
 
-<label for="design">WEBSITE DESIGNING:</label>
-<select id="design" title="Website design options" required><br><br>
-<label for="design">WEBSITE DESIGN:</label>
-  <option value="">--Please choose an option--</option>
-  <option value="500000">mini</option>
-  <option value="850000">standard</option>
-  <option value="1500000">prestige</option>
-  </select>
-  
- <button type="button" onclick="myDesign()">PRICE</button>
+        <script>
+          function myDesign() {
+            var x = document.getElementById("design").value;
+            alert(x);
+          }
+        </script>
+        <br /><br /><br /><br /><br /><br />
 
-<script>
-function myDesign() {
-  var x = document.getElementById("design").value;
-   alert(x);
-}
-</script>
-<br/><br/><br/><br/><br/><br/>
-	
-<button type="submit" class="submit">SEND</button>
+        <button type="submit" class="submit">SEND</button>
 
 
-</form>
-</div>
-<div id="Footer">BOTTOM</div>
-</div>
+      </form>
+    </div>
+    <div id="Footer">BOTTOM</div>
+  </div>
+
+
+  <script>
+    function myDomain() {
+      var x = document.getElementById("domain").value;
+      alert(x);
+    }
+    /** THIS IS THE ADDED PART
+     * line 1: get select element by its id, 'domain'
+     * line 1: Register event listener named 'change', returning a new event 'ev'
+     * line 2: get target button element by its id 'webHostingPriceBtn' and changing its innerHtml to the selected option
+     * ::NB, IT IS RECOMMENDED TO WRITE YOUR JS CODES AT THE BOTTOM OF THE BODY TAG, SO AS ALL OF THE UI ELEMENTS TO BE RENDERED FIRST BEFORE CALLING THE JS OPTIONS.
+     * THOUGH THIS IS NOT ALWAYS THE CASE,
+    */
+    document.getElementById('domain').addEventListener('change', (ev) => {
+      document.getElementById('webHostingPriceBtn').innerHTML = ev.target.value
+    })
+  </script>
+
+
 </body>
-</html>
 
+</html>
