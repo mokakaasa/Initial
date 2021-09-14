@@ -100,9 +100,8 @@
           <label for="username">DomainName:</label>
           <input type="text" id="username" name="username" required autocomplete="on" placeholder="DomainName"
             style="margin-bottom:15px; text-align:center;width:50%;">
-
           <label for="domain">DOMAIN:</label>
-          <select id="domain" required placeholder="Enter Your Domain Name"
+          <select id="domainPriceSelect" required placeholder="Enter Your Domain Name"
             style="margin-bottom:15px;text-align:center;width:30%;">
             <option value="None">--Please choose an option--</option>
             <option value="25000">co.tz</option>
@@ -110,14 +109,13 @@
             <option value="25000">ac.tz</option>
             <option value="35000">com/biz/info/net/org/us</option>
           </select>
-
-          <button type="button" id='webHostingPriceBtn' onclick="myDomain()" id="dom">-</button>
-
+          <button type="button" id='domainPriceBtn' onclick="myDomain()">-</button>
         </div>
+
         <br /><br /><br /><br /><br /><br /><br /><br />
 
         <label for="hosting">WEBSITE HOSTING:</label>
-        <select id="hosting" title="Website hosting options" required><br><br>
+        <select id="hostingPriceSelect" title="Website hosting options" required><br><br>
           <option value="">--Please choose an option--</option>
           <option value="50000">mini</option>
           <option value="100000">budget</option>
@@ -125,8 +123,7 @@
           <option value="250000">silver</option>
           <option value="300000">gold</option>
         </select>
-
-        <button id='webHostingPriceBtn' type="button" onclick="myWeb()">PRICE</button>
+        <button id='webHostingPriceBtn' type="button">-</button>
 
         <script>
           function myWeb() {
@@ -139,7 +136,7 @@
         <br /><br /><br /><br /><br /><br /><br /><br />
 
         <label for="design">WEBSITE DESIGNING:</label>
-        <select id="design" title="Website design options" required><br><br>
+        <select id="designPriceSelect" title="Website design options" required><br><br>
           <label for="design">WEBSITE DESIGN:</label>
           <option value="">--Please choose an option--</option>
           <option value="500000">mini</option>
@@ -147,7 +144,7 @@
           <option value="1500000">prestige</option>
         </select>
 
-        <button type="button" onclick="myDesign()">PRICE</button>
+        <button type="button" id="designPriceBtn">-</button>
 
         <script>
           function myDesign() {
@@ -178,9 +175,18 @@
      * ::NB, IT IS RECOMMENDED TO WRITE YOUR JS CODES AT THE BOTTOM OF THE BODY TAG, SO AS ALL OF THE UI ELEMENTS TO BE RENDERED FIRST BEFORE CALLING THE JS OPTIONS.
      * THOUGH THIS IS NOT ALWAYS THE CASE,
     */
-    document.getElementById('domain').addEventListener('change', (ev) => {
+    document.getElementById('domainPriceSelect').addEventListener('change', (ev) => {
+      document.getElementById('domainPriceBtn').innerHTML = ev.target.value
+    })
+
+    document.getElementById('hostingPriceSelect').addEventListener('change', (ev) => {
       document.getElementById('webHostingPriceBtn').innerHTML = ev.target.value
     })
+
+    document.getElementById('designPriceSelect').addEventListener('change', (ev) => {
+      document.getElementById('designPriceBtn').innerHTML = ev.target.value
+    })
+
   </script>
 
 
